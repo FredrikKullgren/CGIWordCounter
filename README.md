@@ -12,7 +12,7 @@ the run button in visual studio after choosing ISS Express as server. The defaul
 
 
 How to use it:
-Words can be separated by newline or whitespace. This is convenient if you just want to copy and paste a block of text into for example postman.
+Words can be separated by newline or whitespace, at least one is enough but the program will handle multiple in a row also. This is convenient if you just want to copy and paste a block of text into for example postman.
 The Content-Type is free of choice. This means that both these different Content-Type will work (using curl command in this case):
 
 curl -H "Content-Type: text/plain" -d "banana apple pear pear" https://localhost:44367/wordcount
