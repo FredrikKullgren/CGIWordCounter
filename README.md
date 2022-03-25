@@ -1,7 +1,7 @@
 # CGIWordCounter
 What it is:
 This is a web api built using Asp.Net Core (.NET 5) Web API. It exposes a single endpoint(/wordcount) that excpects a block of text as post request. The program 
-counts the number of ocurrences of each word(making no difference if letters capitilazed or not i.e Apple is the same as apple). The result is returned as a list containing the top 10 most used words and their number of ocurrences. The program is only intended to be used locally and not in production scenarios.
+counts the number of ocurrences of each word(making no distinction between capitilazed letters or not, (i.e Apple is the same as apple). The result is returned as a dictionary containing the top 10 most used words and their number of ocurrences. The program is only intended to be used locally and not in production scenarios.
 
 
 How to run it:
