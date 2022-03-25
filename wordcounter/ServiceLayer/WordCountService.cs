@@ -9,22 +9,25 @@ namespace wordcounter.ServiceLayer
     public class WordCountService : IWordCountService
     {
 
-        public List<WordOccurence> GetWordOccurence(string sourceString)
+        public Dictionary<string, int> GetWordOccurence(string sourceString) //List<WordOccurence>
         {
             //Trimming quotation marks and whitespaces if text is pasted into for example postman and the user decides to add quotation marks...
             var trimmedEdges = sourceString.Trim();
             var trimmedLeading = trimmedEdges.TrimStart('"');
             var trimmedResult = trimmedLeading.TrimEnd('"');
-             
-            var stringList = trimmedResult.Split(new[] { " ", "\n", "\r" }, StringSplitOptions.RemoveEmptyEntries).ToList();
-            List<string> lowerCaseStringList = stringList.Select(x => x.ToLower()).ToList();
-            var counts = lowerCaseStringList
+
+            var splittedList = trimmedResult.Split(new[] { " ", "\n", "\r" }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            var lowerCaseStringList = splittedList.Select(x => x.ToLower()).ToList();
+
+            IEnumerable<WordOccurence> topList = lowerCaseStringList
             .GroupBy(w => w)
             .Select(g => new WordOccurence { Word = g.Key, Count = g.Count() })
             .OrderByDescending(o => o.Count)
-            .Take(10).ToList();
-            
-            return counts;
+            .Take(10);
+
+            Dictionary<string, int> result = topList.ToDictionary(x => x.Word, x => x.Count);
+
+            return result;
         }
     }
 }

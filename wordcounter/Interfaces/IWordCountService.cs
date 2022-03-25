@@ -5,6 +5,6 @@ namespace wordcounter.Interfaces
 {
     public interface IWordCountService
     {
-        List<WordOccurence> GetWordOccurence(string inputString);
+        Dictionary<string, int> GetWordOccurence(string inputString);
     }
 }

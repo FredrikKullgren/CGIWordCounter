@@ -23,12 +23,12 @@ namespace wordcounter.Controllers
 
 
         [HttpPost]
-        public async Task<List<WordOccurence>> GetWordCount()
+        public async Task<Dictionary<string, int>> GetWordCount()
         {
             using (StreamReader reader = new StreamReader(Request.Body, Encoding.UTF8)) //Necesarry workaround to enable post request using plain/text format
             {
                 string inputString = await reader.ReadToEndAsync();
-                var result = _wordCounterService.GetWordOccurence(inputString).ToList();
+                var result = _wordCounterService.GetWordOccurence(inputString);
 
                 return result; 
             }
