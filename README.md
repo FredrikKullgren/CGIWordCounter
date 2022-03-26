@@ -19,7 +19,7 @@ Example using curl command:
   curl -X POST -d "banana apple Apple appLe pear pear" https://localhost:44367/wordcount
   {"apple":3,"pear":2,"banana":1}
   
-  ex:2
+  ex2:
   curl -X POST -d "banana banana.banana (banana) banana! banana???" https://localhost:44367/wordcount
   {"banana":6}
   
