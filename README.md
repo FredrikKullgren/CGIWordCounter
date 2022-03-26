@@ -16,7 +16,7 @@ It is also possible to use curl command to retreive the result. Keep in mind if 
 
 Example using curl command:
   ex1:
-  curl -X POST -d "banana apple Apple appLe pear pear" https://localhost:44367/wordcount
+  curl -X POST -d "banana apple Apple appLe pear pear" https://localhost:44367/wordcount<br/>
   {"apple":3,"pear":2,"banana":1}
   
   ex2:
