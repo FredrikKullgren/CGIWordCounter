@@ -12,14 +12,19 @@ and 5001(https). If you run into certificate problems when using curl to perform
 
 How to use it:
 Words can be separated by newline or whitespace, at least one is enough but the program will handle multiple in a row also. This is convenient if you just want to copy and paste a block of text into for example postman.
+It is also possible to use curl command to retreive the result. Keep in mind if you are using powershell use curl.exe instead of just curl.
 
 Example using curl command:
+  ex1:
   curl -X POST -d "banana apple Apple appLe pear pear" https://localhost:44367/wordcount
   {"apple":3,"pear":2,"banana":1}
-
+  
+  ex:2
+  curl -X POST -d "banana banana.banana (banana) banana! banana???" https://localhost:44367/wordcount
+  {"banana":6}
+  
 Notes:
-To be able to just paste a string with no surrounding brackets the controller needs to accept plain text. This is solved in the current solution in such a way
-that any Content-Type in the header of the POST request is accepted.
+To be able to just paste a string with no surrounding brackets the controller needs to accept plain text. This is solved in the current solution in such a way that any Content-Type in the header of the POST request is accepted.
 The current solution therfore accepts whatever value you use and can even be omitted as shown in previous example. This is not ideal and needs to be fixed in the future.
 
 
