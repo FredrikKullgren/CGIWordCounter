@@ -199,9 +199,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\99kru\\source\\repos\\wordcounter\\wordcounter\\wordcounter.csproj",
-      "projectName": "wordcounter",
-      "projectPath": "C:\\Users\\99kru\\source\\repos\\wordcounter\\wordcounter\\wordcounter.csproj",
+      "projectUniqueName": "C:\\Users\\99kru\\source\\repos\\wordcounter\\wordcounter\\wordcounter.API.csproj",
+      "projectName": "wordcounter.API",
+      "projectPath": "C:\\Users\\99kru\\source\\repos\\wordcounter\\wordcounter\\wordcounter.API.csproj",
       "packagesPath": "C:\\Users\\99kru\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\99kru\\source\\repos\\wordcounter\\wordcounter\\obj\\",
       "projectStyle": "PackageReference",

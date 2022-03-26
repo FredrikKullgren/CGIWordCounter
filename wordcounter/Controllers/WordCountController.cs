@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -23,14 +24,21 @@ namespace wordcounter.Controllers
 
 
         [HttpPost]
-        public async Task<Dictionary<string, int>> GetWordCount()
+        public async Task<ActionResult<Dictionary<string, int>>> GetWordCount()
         {
+            
             using (StreamReader reader = new StreamReader(Request.Body, Encoding.UTF8)) //Necesarry workaround to enable post request using plain/text format
             {
-                string inputString = await reader.ReadToEndAsync();
-                var result = _wordCounterService.GetWordOccurence(inputString);
-
-                return result; 
+                try
+                {
+                    string inputString = await reader.ReadToEndAsync();
+                    return _wordCounterService.GetWordOccurence(inputString);
+                }
+                catch(Exception e)
+                {
+                    return BadRequest(e.Message);
+                }
+                
             }
         }
 

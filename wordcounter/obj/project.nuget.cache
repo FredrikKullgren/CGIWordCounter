@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XP6tj/Uzwn2w2bT/Jd5vWJUUzMgC1pF5WItR+jeAViXHgmqoi208tWGWXn3k/6hwBl4cuFMa8oUbIrLqjL9taw==",
+  "dgSpecHash": "rTnda3SI5XMl2SqOQ23Lb1++3nxAaRj7ox6uP/y6Chm/vJV9m1aSNvn2VVX48b+pmGrrNdi+3EN4KXBvOxYYwA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\99kru\\source\\repos\\wordcounter\\wordcounter\\wordcounter.csproj",
+  "projectFilePath": "C:\\Users\\99kru\\source\\repos\\wordcounter\\wordcounter\\wordcounter.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\99kru\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\99kru\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

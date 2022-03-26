@@ -16,14 +16,14 @@ namespace wordcounter.ServiceLayer
             var trimmedLeading = trimmedEdges.TrimStart('"');
             var trimmedResult = trimmedLeading.TrimEnd('"');
 
-            var splittedList = trimmedResult.Split(new[] { " ", "\n", "\r" }, StringSplitOptions.RemoveEmptyEntries).ToList();
+            var splittedList = trimmedResult.Split(new[] { " ", "\n" , "\r", "\t", ".", ",", "?", "!", "(", ")" }, StringSplitOptions.RemoveEmptyEntries).ToList();
             var lowerCaseStringList = splittedList.Select(x => x.ToLower()).ToList();
 
             IEnumerable<WordOccurence> topList = lowerCaseStringList
             .GroupBy(w => w)
             .Select(g => new WordOccurence { Word = g.Key, Count = g.Count() })
-            .OrderByDescending(o => o.Count)
-            .Take(10);
+            .OrderByDescending(o => o.Count);
+            //.Take(10);
 
             Dictionary<string, int> result = topList.ToDictionary(x => x.Word, x => x.Count);
 
