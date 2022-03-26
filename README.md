@@ -20,7 +20,7 @@ Example using curl command:
   {"apple":3,"pear":2,"banana":1}
   
   ex2:
-  curl -X POST -d "banana banana.banana (banana) banana! banana???" https://localhost:44367/wordcount
+  curl -X POST -d "banana banana.banana (banana) banana! banana???" https://localhost:44367/wordcount<br/>
   {"banana":6}
   
 Notes:
