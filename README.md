@@ -7,7 +7,7 @@ Note: Numbers counts as words. Example: 2022 will be counted as one occurence of
 
 How to run it:
 Clone this repository and just type dotnet run to build and run the project. This will start a local server(Kestrel embedded server) on port 5000(http)
-and 5001(https). If you run into certificate problems when using curl to perform the post request you can install the webserver ISS Express instead. Using visual studio start the IIS Server by pressing the run button after choosing ISS Express as server. The default port here is (44367)
+and 5001(https). If you run into certificate problems when using curl to perform the post request you can install the webserver ISS Express instead. Using Visual Studio start the IIS Server by pressing the run button after choosing ISS Express as server. The default port here is (44367)
 
 
 How to use it:
